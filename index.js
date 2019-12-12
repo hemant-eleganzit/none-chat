@@ -14,12 +14,12 @@ app.set('view engine', 'ejs');
 
 console.log("outside io");
 
-/*app.get('/', function(req, res) {
+app.get('/', function(req, res) {
     res.render('index.ejs');
     console.log(req)
     console.log("----------------------------------------------")
     console.log(res)
-});*/
+});
 
 io.on('connection', function(socket){
 
