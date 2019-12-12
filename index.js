@@ -14,6 +14,13 @@ app.set('view engine', 'ejs');
 
 console.log("outside io");
 
+/*app.get('/', function(req, res) {
+    res.render('index.ejs');
+    console.log(req)
+    console.log("----------------------------------------------")
+    console.log(res)
+});*/
+
 io.on('connection', function(socket){
 
   console.log('User Conncetion');
@@ -29,7 +36,7 @@ io.on('connection', function(socket){
   });
 
   socket.on('chat message', function(msg){
-    console.log("Message " + msg['message']);
+    console.log("Message " + msg);
     io.emit('chat message', msg);
   });
 });
